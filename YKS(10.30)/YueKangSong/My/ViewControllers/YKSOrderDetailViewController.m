@@ -32,9 +32,10 @@
                                   [self showToastMessage:@"网络加载失败"];
                                   return ;
                               }
+                              
                               if (ServerSuccess(responseObject)) {
-                                  NSArray *progressArray = responseObject[@"data"][@"orderDetail"];
                                   
+                                  NSArray *progressArray = responseObject[@"data"][@"orderDetail"];
                                   
                                   NSDictionary *dic = responseObject[@"data"][@"orderDetail"];
                                   if (dic) {
@@ -136,26 +137,26 @@
                                       [labelView addSubview:Btn2];
                                       
                                       [labelView addSubview:Btn3];
-                                      
+                                     
                                       
                                       // Btn1
                                       
                                       UILabel *dJlabel1 = [[UILabel alloc]initWithFrame:CGRectMake(18, 5, Btn1.bounds.size.width-60, Btn1.bounds.size.height/2-5)];
                                       dJlabel1.text=descriptions[0];
-                                      dJlabel1.font=[UIFont systemFontOfSize:16];
+                                      dJlabel1.font=[UIFont systemFontOfSize:14];
                                       
                                       
                                       
                                       UILabel *dJlabel2=[[UILabel alloc]initWithFrame:CGRectMake(18, Btn1.bounds.size.height/2, Btn1.bounds.size.width-30, Btn1.bounds.size.height/2-5)];
-                                      NSString *dJinfo =[NSString stringWithFormat:@"单号：%@",responseObject[@"data"][@"courierPhone"]];
+                                      NSString *dJinfo =[NSString stringWithFormat:@"单号：%@",responseObject[@"data"][@"expressNo"]];
                                       dJlabel2.text=dJinfo;
-                                      dJlabel2.font=[UIFont systemFontOfSize:14];
+                                      dJlabel2.font=[UIFont systemFontOfSize:13];
                                       dJlabel2.textColor=[UIColor colorWithRed:134/255.0 green:135/255.0 blue:136/255.0 alpha:1];
                                       
                                       UILabel *dJlabel3 = [[UILabel alloc]initWithFrame:CGRectMake(Btn1.bounds.size.width-55,Btn1.bounds.size.height/2,50, 20)];
                                       NSString *string1 = times[0];
                                       dJlabel3.text=[string1 substringFromIndex:11];
-                                      dJlabel3.font=[UIFont systemFontOfSize:14];
+                                      dJlabel3.font=[UIFont systemFontOfSize:13];
                                       dJlabel3.textColor = [UIColor  colorWithRed:134/255.0 green:135/255.0 blue:136/255.0 alpha:1];
                                       
                                       [Btn1 addSubview:dJlabel1];
@@ -167,57 +168,51 @@
                                       
                                       UILabel *kDlabel1 = [[UILabel alloc]initWithFrame:CGRectMake(18, 5, Btn2.bounds.size.width-60, Btn2.bounds.size.height/2-5)];
                                       kDlabel1.text=descriptions[1];
-                                      kDlabel1.font=[UIFont systemFontOfSize:16];
+                                      kDlabel1.font=[UIFont systemFontOfSize:14];
                                       
                                       
                                       
                                       UILabel *kDlabel2=[[UILabel alloc]initWithFrame:CGRectMake(18, Btn2.bounds.size.height/2, Btn2.bounds.size.width-30, Btn2.bounds.size.height/2-5)];
                                       NSString *kDinfo =[NSString stringWithFormat:@"快递员：%@ %@",responseObject[@"data"][@"courierName"],responseObject[@"data"][@"courierPhone"]];
                                       kDlabel2.text=kDinfo;
-                                      kDlabel2.font=[UIFont systemFontOfSize:14];
+                                      kDlabel2.font=[UIFont systemFontOfSize:13];
                                       kDlabel2.textColor=[UIColor colorWithRed:134/255.0 green:135/255.0 blue:136/255.0 alpha:1];
                                       
                                       UILabel *kDlabel3 = [[UILabel alloc]initWithFrame:CGRectMake(Btn2.bounds.size.width-55, Btn2.bounds.size.height/2,50, 20)];
                                       NSString *string2 = times[1];
                                       kDlabel3.text=[string2 substringFromIndex:11];
-                                      kDlabel3.font=[UIFont systemFontOfSize:14];
+                                      kDlabel3.font=[UIFont systemFontOfSize:13];
                                       kDlabel3.textColor = [UIColor  colorWithRed:134/255.0 green:135/255.0 blue:136/255.0 alpha:1];
                                       
                                       [Btn2 addSubview:kDlabel1];
                                       [Btn2 addSubview:kDlabel2];
                                       [Btn2 addSubview:kDlabel3];
-                                      
-                                      
-                                      
+                                   
                                       //Btn3
-                                      
-                                      
-                                      
+                                   
                                       UILabel *qSlabel1 = [[UILabel alloc]initWithFrame:CGRectMake(18, 5, Btn3.bounds.size.width-60, Btn3.bounds.size.height/2-5)];
                                       qSlabel1.text=descriptions[2];
-                                      qSlabel1.font=[UIFont systemFontOfSize:16];
+                                      qSlabel1.font=[UIFont systemFontOfSize:14];
                                       
                                       
                                       
                                       UILabel *qSlabel2=[[UILabel alloc]initWithFrame:CGRectMake(18, Btn3.bounds.size.height/2, Btn3.bounds.size.width-30, Btn3.bounds.size.height/2-5)];
                                       NSString *qSinfo =@"任何意见都欢迎联系我们。";
                                       qSlabel2.text=qSinfo;
-                                      qSlabel2.font=[UIFont systemFontOfSize:14];
+                                      qSlabel2.font=[UIFont systemFontOfSize:13];
                                       qSlabel2.textColor=[UIColor colorWithRed:134/255.0 green:135/255.0 blue:136/255.0 alpha:1];
                                       
                                       UILabel *qSlabel3 = [[UILabel alloc]initWithFrame:CGRectMake(Btn2.bounds.size.width-55, Btn3.bounds.size.height/2,50, 20)];
                                       NSString *string3 = times[2];
                                       qSlabel3.text=[string3 substringFromIndex:11];
-                                      qSlabel3.font=[UIFont systemFontOfSize:14];
+                                      qSlabel3.font=[UIFont systemFontOfSize:13];
                                       qSlabel3.textColor = [UIColor  colorWithRed:134/255.0 green:135/255.0 blue:136/255.0 alpha:1];
                                       
                                       [Btn3 addSubview:qSlabel1];
                                       [Btn3 addSubview:qSlabel2];
                                       [Btn3 addSubview:qSlabel3];
                                       
-                                      
-                                      // 状态判断
-                                      
+                                    // 状态判断
                                       if (progressArray.count==1)
                                       {
                                           dJbtn.selected=YES;
@@ -241,19 +236,13 @@
                                           qSbtn.selected=YES;
                                       }
                                       
-                                      
-                                      
-                                      
-                                      
                                       //  下侧视图。
                                       
                                       UILabel *label1 =[[UILabel alloc]initWithFrame:CGRectMake(self.view.frame.size.width/3-20,280, self.view.frame.size.width, 60)];
                                       label1 .font = [UIFont systemFontOfSize:18];
                                       label1.text=@"交易成功，分享一下";
                                       
-                                      
-                                      
-                                      
+                                 
                                       UILabel *label2=[[UILabel alloc]initWithFrame:CGRectMake(10, 310,self.view.frame.size.width-20 ,100)];
                                       label2.text=@" 分享给朋友们，悦康送新用户可领取一张优惠券，对方\n使用后你也将获得一张优惠券";
                                       label2.font=[UIFont systemFontOfSize:12];
@@ -300,15 +289,13 @@
                                       self.tableView.tableFooterView = footView;
                                   }
                                   
-                                  
-                                  
+                        
                               } else {
                                   //[self showToastMessage:responseObject[@"msg"]];
                               }
                           }];
     }
 }
-
 
 //  分享微信好友
 -(void)dobtn1:(id)sender
@@ -336,7 +323,6 @@
     
 }
 
-
 // 分享微信朋友圈
 -(void)dobtn2:(id)sender
 {
@@ -359,7 +345,6 @@
     }];
     
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
