@@ -782,7 +782,7 @@
         
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
         
-        [btn setImage:[UIImage imageNamed:@"default_icon_logo"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"screenshot"] forState:UIControlStateNormal];
         
         btn.frame=CGRectMake(15+i%2*(SCREEN_WIDTH/2), 10+(i/2)*56, 35, 35);
         
@@ -848,7 +848,7 @@
         
         UIButton *btn=[UIButton buttonWithType:UIButtonTypeCustom];
         
-        [btn setTitle:@"更多药品分类" forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"gengduo"] forState:UIControlStateNormal];
         
         btn.frame=CGRectMake((SCREEN_WIDTH-160)/2, 5, 160,22 );
         
